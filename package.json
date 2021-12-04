@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "beautiful": "prettier --single-quote --trailing-comma all --write --tab-width 4 \"./src/**/*.{js,json}\"",
-    "start": "nodemon --inspect ./src/index.js",
+    "start": "node ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "lint-staged": {
