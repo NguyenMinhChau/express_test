@@ -20,7 +20,7 @@
                     <button class="btn btn-primary" id="btnAction" disabled>Thực hiện</button>
                 </div>
             </div>
-            <table class='table text-center'>
+            <table class='table table-responsive-sm text-center'>
                 <thead>
                     <tr>
                         <th scope='col'>#</th>
@@ -39,7 +39,7 @@
                             </td>
                             <th scope='row'>{{sum @index 1}}</th>
                             <td>{{this.title}}</td>
-                            <td>{{this.description}}</td>
+                            <td class='meDescription'>{{this.description}}</td>
                             <td>{{this.deletedAt}}</td>
                             <td>
                                 <a href='' class='btn btn-outline-primary btnRestore'
@@ -137,3 +137,24 @@
         })
     })
 </script>
+<style>
+    @media (max-width: 46.25em) {
+    .meDescription{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        height: 170px;
+        overflow-x: auto;
+    }
+    .meDescription::-webkit-scrollbar {
+        width: 3px;
+    }
+    .meDescription::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    .meDescription::-webkit-scrollbar-thumb {
+        background: rgb(180, 180, 180);
+        border-radius: 10px;
+    }
+}
+</style>
