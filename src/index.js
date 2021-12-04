@@ -51,6 +51,6 @@ app.use(SortMiddleware);
 db.connect();
 router(app);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
