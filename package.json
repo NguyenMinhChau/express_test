@@ -1,0 +1,37 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "beautiful": "prettier --single-quote --trailing-comma all --write --tab-width 4 \"./src/**/*.{js,json}\"",
+    "start": "nodemon --inspect ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,json}": "prettier --single-quote --trailing-comma all --write --tab-width 4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^6.0.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.0.13",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-sequence": "^5.3.1",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1"
+  }
+}

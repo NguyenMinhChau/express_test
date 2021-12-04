@@ -1,0 +1,41 @@
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.list-course a{
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.list-course .link-recycle{
+    color: green;
+    font-weight: bold;
+}
+
+.list-course a:hover{
+    color: red;
+}
+
+#btnAction{
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+#selectActions{
+    margin: auto 10px;
+}
+.card-text{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
