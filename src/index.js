@@ -39,7 +39,6 @@ app.engine(
 );
 app.set('view engine', '.hbs');
 app.set('views', './src/views');
-
 //static file
 app.use(express.static(path.join(__dirname, '../assets/')));
 //submit form method = POST
@@ -47,10 +46,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(SortMiddleware);
-
 db.connect();
 router(app);
-
 app.listen(process.env.PORT || port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
