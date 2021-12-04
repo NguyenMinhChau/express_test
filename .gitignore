@@ -1,6 +1,2 @@
 .history/
 node-_modules/
-functions
-
-# Local Netlify folder
-.netlify
